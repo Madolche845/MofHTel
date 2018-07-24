@@ -9,16 +9,21 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import android.content.Intent;
+import android.os.Handler;
+
 import java.util.NavigableMap;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mToggle;
+    private static int SPLASH_TIME_OUT = 3000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         mDrawerLayout = (DrawerLayout)findViewById(R.id.drawer);
         mToggle = new ActionBarDrawerToggle(this,mDrawerLayout,R.string.open,R.string.close);
         mDrawerLayout.addDrawerListener(mToggle);
@@ -27,6 +32,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         NavigationView navigationView=(NavigationView)findViewById(R.id.navigation_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        //fun loading
+//        new Handler().postDelayed(new Runnable(){
+//            @Override
+//            public void run(){
+//                Intent homeIntent = new Intent(MainActivity.this, HomeActivity.class);
+//                startActivity(homeIntent);
+//                finish();
+//            }
+//        },SPLASH_TIME_OUT);
+
     }
 
     @Override
@@ -58,4 +74,5 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
         return false;
     }
+
 }
