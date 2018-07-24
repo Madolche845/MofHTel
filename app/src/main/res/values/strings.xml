@@ -2,5 +2,9 @@
     <string name="app_name">MOFhotel</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
+<<<<<<< HEAD
     <string name="title_activity_maps">Map</string>
+=======
+    <string name="signup">SignUp</string>
+>>>>>>> 9f1d65764180fcf0645eff8cf088b549351cc3b9
 </resources>

@@ -1,5 +1,6 @@
 package com.example.crimson.mofhotel;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.ViewPager;
@@ -72,7 +73,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Toast.makeText(this,"This is Home page",Toast.LENGTH_LONG).show();
         }
         if(id == R.id.login){
-            Toast.makeText(this,"This is Login page",Toast.LENGTH_LONG).show();
+            Intent myintent = new Intent(MainActivity.this,login_activity.class);
+            startActivity(myintent);
         }
         if(id == R.id.register){
             Toast.makeText(this,"This is Register page",Toast.LENGTH_LONG).show();

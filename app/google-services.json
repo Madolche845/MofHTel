@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "41069940493",
+    "firebase_url": "https://mofhotel.firebaseio.com",
+    "project_id": "mofhotel",
+    "storage_bucket": "mofhotel.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:41069940493:android:478a56eae0ea006b",
+        "android_client_info": {
+          "package_name": "com.example.crimson.mofhotel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "41069940493-oppe2u2brb65fvafqq09ktco1b6mo2rb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.crimson.mofhotel",
+            "certificate_hash": "1f15bf1671551d9381971ceeaee05cb481a07a7a"
+          }
+        },
+        {
+          "client_id": "41069940493-6belmd02ve69r5t8t03g5cvk7r3eh805.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBf0X88n6r2FbP3vlSbBg2rTNr7AbnTz4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "41069940493-6belmd02ve69r5t8t03g5cvk7r3eh805.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
