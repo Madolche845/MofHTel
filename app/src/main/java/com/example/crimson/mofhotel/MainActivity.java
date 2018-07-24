@@ -2,6 +2,7 @@ package com.example.crimson.mofhotel;
 
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -13,11 +14,15 @@ import android.content.Intent;
 import android.os.Handler;
 
 import java.util.NavigableMap;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mToggle;
     private static int SPLASH_TIME_OUT = 3000;
+
+    ViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +48,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 //            }
 //        },SPLASH_TIME_OUT);
 
+        viewPager = (ViewPager) findViewById(R.id.viewPager);
+        ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(this);
+        viewPager.setAdapter(viewPagerAdapter);
+
+        Timer timer = new Timer();
+        timer.scheduleAtFixedRate(new MyTimerTask(), 2000,4000);
     }
 
     @Override
@@ -70,9 +81,51 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Toast.makeText(this,"This is Booking page",Toast.LENGTH_LONG).show();
         }
         if(id == R.id.contact){
-            Toast.makeText(this,"This is Contact page",Toast.LENGTH_LONG).show();
+            Intent map = new Intent(MainActivity.this, MapsActivity.class);
+            startActivity(map);
+            finish();
         }
         return false;
     }
+//Button Exit app.
+    boolean twice;
+    @Override
+    public void onBackPressed() {
+//        super.onBackPressed();
+        if (twice == true){
+            Intent intent = new Intent(Intent.ACTION_MAIN);
+            intent.addCategory(Intent.CATEGORY_HOME);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+            finish();
+            System.exit(0);
+        }
+        Toast.makeText(MainActivity.this,"กดอีกครั้งเพื่อออก", Toast.LENGTH_SHORT).show();
+        new Handler().postDelayed(new Runnable(){
+            @Override
+            public void run(){
+                twice = true;
+            }
+        },3000);
+        twice = true;
+    }
 
+    public class MyTimerTask extends TimerTask{
+
+        @Override
+        public void run(){
+            MainActivity.this.runOnUiThread(new Runnable(){
+                @Override
+                public void run(){
+                    if(viewPager.getCurrentItem() == 0){
+                        viewPager.setCurrentItem(1);
+                    }else if(viewPager.getCurrentItem() == 1){
+                        viewPager.setCurrentItem(2);
+                    }else {
+                        viewPager.setCurrentItem(0);
+                    }
+                }
+            });
+        }
+    }
 }
