@@ -114,17 +114,15 @@ public class login_activity extends AppCompatActivity implements NavigationView.
             startActivity(myintent);
         }
         if(id == R.id.login){
-            Toast.makeText(this,"This is Login page",Toast.LENGTH_LONG).show();
+            Toast.makeText(this,"You on screen already!",Toast.LENGTH_LONG).show();
         }
         if(id == R.id.register){
             Intent myintent = new Intent(login_activity.this,RegisterActivity.class);
             startActivity(myintent);
         }
-        if(id == R.id.booking){
-            Toast.makeText(this,"This is Booking page",Toast.LENGTH_LONG).show();
-        }
         if(id == R.id.contact){
-            Toast.makeText(this,"This is Contact page",Toast.LENGTH_LONG).show();
+            Intent myintent = new Intent(login_activity.this,MapsActivity.class);
+            startActivity(myintent);
         }
         return false;
     }

@@ -5,7 +5,7 @@
     android:id="@+id/drawer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_blue_light"
+    android:background="@drawable/picture"
     tools:context=".login_activity">
 
     <LinearLayout
@@ -68,8 +68,6 @@
 
 
         </RelativeLayout>
-
-
 
     </LinearLayout>
 
