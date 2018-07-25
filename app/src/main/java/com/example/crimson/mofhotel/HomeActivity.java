@@ -58,9 +58,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
         int id = menuItem.getItemId();
         if(id == R.id.home){
-            Intent home = new Intent(HomeActivity.this, HomeActivity.class);
-            startActivity(home);
-            finish();
+            Toast.makeText(this,"You on screen already!",Toast.LENGTH_LONG).show();
         }
         if(id == R.id.login){
             Intent myintent = new Intent(HomeActivity.this,login_activity.class);

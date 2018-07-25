@@ -121,7 +121,6 @@ public class BookingActivity extends AppCompatActivity implements NavigationView
             finish();
         }
         if(id == R.id.login){
-            Toast.makeText(this,"You on screen already!",Toast.LENGTH_LONG).show();
 
             Intent home = new Intent(BookingActivity.this, login_activity.class);
             startActivity(home);
@@ -131,13 +130,16 @@ public class BookingActivity extends AppCompatActivity implements NavigationView
             Intent myintent = new Intent(BookingActivity.this,RegisterActivity.class);
             startActivity(myintent);
         }
+        if(id == R.id.booking){
+            Toast.makeText(this,"You on screen already!",Toast.LENGTH_LONG).show();
+        }
         if(id == R.id.contact){
 
-            Intent myintent = new Intent(BookingActivity.this,MapsActivity.class);
+            Intent myintent = new Intent(BookingActivity.this,ContactActivity.class);
             startActivity(myintent);
-            Intent map = new Intent(BookingActivity.this, MapsActivity.class);
-            startActivity(map);
-            finish();
+//            Intent map = new Intent(BookingActivity.this, ContactActivity.class);
+//            startActivity(map);
+//            finish();
 
         }
         return false;

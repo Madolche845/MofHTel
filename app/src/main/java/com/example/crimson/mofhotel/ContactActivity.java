@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.view.MenuItem;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
@@ -42,13 +43,13 @@ public class ContactActivity extends AppCompatActivity  implements NavigationVie
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.item_recent:
-                        textView.setText("Recent");
+                        textView.setText("");
                         return true;
                     case R.id.item_favorite:
                         Intent map = new Intent(ContactActivity.this, MapsActivity.class);
                         startActivity(map);
                     case R.id.item_nearby:
-                        textView.setText("Nearby");
+                        Toast.makeText(ContactActivity.this,"Calling...",Toast.LENGTH_SHORT).show();
                         return true;
                 }
                 return false;
@@ -86,16 +87,15 @@ public class ContactActivity extends AppCompatActivity  implements NavigationVie
             startActivity(myintent);
         }
         if(id == R.id.register){
-            Toast.makeText(this,"This is Register page",Toast.LENGTH_LONG).show();
+            Intent home = new Intent(ContactActivity.this, RegisterActivity.class);
+            startActivity(home);
         }
         if(id == R.id.booking){
             Intent home = new Intent(ContactActivity.this, BookingActivity.class);
             startActivity(home);
         }
         if(id == R.id.contact){
-            Intent map = new Intent(ContactActivity.this, ContactActivity.class);
-            startActivity(map);
-            finish();
+            Toast.makeText(this,"You on screen already!",Toast.LENGTH_LONG).show();
         }
         return false;
     }

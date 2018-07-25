@@ -113,9 +113,6 @@ public class login_activity extends AppCompatActivity implements NavigationView.
         }
         if(id == R.id.login){
             Toast.makeText(this,"You on screen already!",Toast.LENGTH_LONG).show();
-            Intent home = new Intent(login_activity.this, login_activity.class);
-            startActivity(home);
-            finish();
 
         }
         if(id == R.id.register){
@@ -127,13 +124,12 @@ public class login_activity extends AppCompatActivity implements NavigationView.
             startActivity(myintent);
         }
         if(id == R.id.contact){
-
-            Intent myintent = new Intent(login_activity.this,MapsActivity.class);
+            Intent myintent = new Intent(login_activity.this,ContactActivity.class);
             startActivity(myintent);
 
-            Intent map = new Intent(login_activity.this, MapsActivity.class);
-            startActivity(map);
-            finish();
+//            Intent map = new Intent(login_activity.this, MapsActivity.class);
+//            startActivity(map);
+//            finish();
         }
         return false;
     }
