@@ -13,6 +13,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -101,6 +102,22 @@ public class BookingActivity extends AppCompatActivity implements NavigationView
                 mDisplayDate1.setText(date);
             }
         };
+
+        Button A1 = findViewById(R.id.button);
+        Button A2 = findViewById(R.id.button6);
+        A1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(BookingActivity.this, "Add Room Successful!", Toast.LENGTH_LONG).show();
+            }
+        });
+        A2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myintent = new Intent(BookingActivity.this,stockActivity.class);
+                startActivity(myintent);
+            }
+        });
 
     }
 
