@@ -5,25 +5,29 @@
     android:id="@+id/drawer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg"
     tools:context=".BookingActivity">
-    
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/checkin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="59dp"
+                android:layout_alignStart="@+id/checkout"
+                android:layout_marginTop="58dp"
                 android:hint="Check in Date"
                 android:textSize="34dp" />
 
@@ -31,21 +35,15 @@
                 android:id="@+id/checkout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
                 android:layout_alignParentEnd="true"
-                android:layout_alignTop="@+id/checkin"
-                android:layout_marginEnd="19dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="70dp"
+                android:layout_marginTop="139dp"
                 android:hint="Check Out Date"
                 android:textSize="34dp" />
 
         </RelativeLayout>
     </LinearLayout>
-
-    <android.support.design.widget.BottomNavigationView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    </android.support.design.widget.BottomNavigationView>
 
 
     <android.support.design.widget.NavigationView

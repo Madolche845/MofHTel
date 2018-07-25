@@ -9,6 +9,8 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import android.content.Intent;
@@ -20,6 +22,7 @@ import java.util.TimerTask;
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mToggle;
+    private Button button;
 
     ViewPager viewPager;
 
@@ -43,6 +46,15 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
         Timer timer = new Timer();
         timer.scheduleAtFixedRate(new MyTimerTask(), 2000,4000);
+
+        button = (Button) findViewById(R.id.btnbooking);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myintent = new Intent(HomeActivity.this,BookingActivity.class);
+                startActivity(myintent);
+            }
+        });
     }
 
     @Override

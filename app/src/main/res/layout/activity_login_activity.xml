@@ -15,6 +15,8 @@
         android:layout_height="wrap_content">
 
         <RelativeLayout
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="450dp">
 
@@ -39,13 +41,13 @@
                 android:hint="User name"
                 android:inputType="text"
                 android:text=""
-                android:textColor="@android:color/white"
-                android:textColorHint="@android:color/white"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
                 android:textSize="24dp"
-                app:met_baseColor="@android:color/white"
+                app:met_baseColor="@android:color/black"
                 app:met_floatingLabel="highlight"
                 app:met_maxCharacters="11"
-                app:met_primaryColor="@android:color/white"
+                app:met_primaryColor="@android:color/black"
                 app:met_singleLineEllipsis="true" />
 
             <com.rengwuxian.materialedittext.MaterialEditText
@@ -59,13 +61,13 @@
                 android:hint="Password"
                 android:inputType="textPassword"
                 android:text=""
-                android:textColor="@android:color/white"
-                android:textColorHint="@android:color/white"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
                 android:textSize="24dp"
-                app:met_baseColor="@android:color/white"
+                app:met_baseColor="@android:color/black"
                 app:met_floatingLabel="highlight"
                 app:met_maxCharacters="11"
-                app:met_primaryColor="@android:color/white"
+                app:met_primaryColor="@android:color/black"
                 app:met_singleLineEllipsis="true" />
 
         </RelativeLayout>
