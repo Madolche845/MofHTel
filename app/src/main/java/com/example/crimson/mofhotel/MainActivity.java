@@ -13,8 +13,7 @@ public class MainActivity extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        getSupportActionBar().setTitle("");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        getSupportActionBar().hide();
         //fun loading
         new Handler().postDelayed(new Runnable(){
             @Override

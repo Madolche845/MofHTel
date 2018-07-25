@@ -110,11 +110,14 @@ public class login_activity extends AppCompatActivity implements NavigationView.
 
         int id = menuItem.getItemId();
         if(id == R.id.home){
-            Intent myintent = new Intent(login_activity.this,MainActivity.class);
-            startActivity(myintent);
+            Intent home = new Intent(login_activity.this, HomeActivity.class);
+            startActivity(home);
+            finish();
         }
         if(id == R.id.login){
-            Toast.makeText(this,"This is Login page",Toast.LENGTH_LONG).show();
+            Intent home = new Intent(login_activity.this, login_activity.class);
+            startActivity(home);
+            finish();
         }
         if(id == R.id.register){
             Intent myintent = new Intent(login_activity.this,RegisterActivity.class);
@@ -124,7 +127,9 @@ public class login_activity extends AppCompatActivity implements NavigationView.
             Toast.makeText(this,"This is Booking page",Toast.LENGTH_LONG).show();
         }
         if(id == R.id.contact){
-            Toast.makeText(this,"This is Contact page",Toast.LENGTH_LONG).show();
+            Intent map = new Intent(login_activity.this, MapsActivity.class);
+            startActivity(map);
+            finish();
         }
         return false;
     }
