@@ -77,8 +77,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             }
         }
         if(id == R.id.contact){
-            Intent map = new Intent(HomeActivity.this, MapsActivity.class);
-            startActivity(map);
+            Intent contact = new Intent(HomeActivity.this, ContactActivity.class);
+            startActivity(contact);
             finish();
         }
         return false;

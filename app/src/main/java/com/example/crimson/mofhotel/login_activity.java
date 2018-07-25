@@ -113,7 +113,6 @@ public class login_activity extends AppCompatActivity implements NavigationView.
         }
         if(id == R.id.login){
             Toast.makeText(this,"You on screen already!",Toast.LENGTH_LONG).show();
-
             Intent home = new Intent(login_activity.this, login_activity.class);
             startActivity(home);
             finish();
@@ -135,7 +134,6 @@ public class login_activity extends AppCompatActivity implements NavigationView.
             Intent map = new Intent(login_activity.this, MapsActivity.class);
             startActivity(map);
             finish();
-
         }
         return false;
     }
