@@ -112,7 +112,8 @@ public class RegisterActivity extends AppCompatActivity implements NavigationVie
             startActivity(myintent);
         }
         if(id == R.id.booking){
-            Toast.makeText(this,"This is Booking page",Toast.LENGTH_LONG).show();
+            Intent myintent = new Intent(RegisterActivity.this,BookingActivity.class);
+            startActivity(myintent);
         }
         if(id == R.id.contact){
             Intent myintent = new Intent(RegisterActivity.this,MapsActivity.class);

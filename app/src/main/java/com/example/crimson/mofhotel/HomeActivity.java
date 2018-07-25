@@ -67,10 +67,14 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             startActivity(myintent);
         }
         if(id == R.id.register){
-            Toast.makeText(this,"This is Register page",Toast.LENGTH_LONG).show();
+            Intent myintent = new Intent(HomeActivity.this,RegisterActivity.class);
+            startActivity(myintent);
         }
         if(id == R.id.booking){
-            Toast.makeText(this,"This is Booking page",Toast.LENGTH_LONG).show();
+            if(id == R.id.booking){
+                Intent myintent = new Intent(HomeActivity.this,BookingActivity.class);
+                startActivity(myintent);
+            }
         }
         if(id == R.id.contact){
             Intent map = new Intent(HomeActivity.this, MapsActivity.class);
