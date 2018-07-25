@@ -115,27 +115,23 @@ public class login_activity extends AppCompatActivity implements NavigationView.
             finish();
         }
         if(id == R.id.login){
-<<<<<<< HEAD
+
             Toast.makeText(this,"You on screen already!",Toast.LENGTH_LONG).show();
-=======
             Intent home = new Intent(login_activity.this, login_activity.class);
             startActivity(home);
             finish();
->>>>>>> e7291c75698c9a06b109e47524165c58cf8261af
+
         }
         if(id == R.id.register){
             Intent myintent = new Intent(login_activity.this,RegisterActivity.class);
             startActivity(myintent);
         }
         if(id == R.id.contact){
-<<<<<<< HEAD
             Intent myintent = new Intent(login_activity.this,MapsActivity.class);
             startActivity(myintent);
-=======
             Intent map = new Intent(login_activity.this, MapsActivity.class);
             startActivity(map);
             finish();
->>>>>>> e7291c75698c9a06b109e47524165c58cf8261af
         }
         return false;
     }

@@ -23,7 +23,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".HomeActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -39,16 +38,17 @@
 
         <activity
             android:name=".MapsActivity"
-            android:label="@string/title_activity_maps"/>
+            android:parentActivityName=".ContactActivity"
+            android:label="@string/title_activity_maps"
+            />
         <activity android:name=".login_activity" />
 
+        <!-- <activity android:name=".login_activity"> -->
+        <!-- </activity> -->
+        <activity android:name=".RegisterActivity"></activity>
+        <!-- <activity android:name=".HomeActivity"></activity> -->
 
-        <!--<activity android:name=".login_activity">-->
-        <!--</activity>-->
-        <activity android:name=".RegisterActivity">
-        </activity>
-        <!--<activity android:name=".HomeActivity"></activity>-->
-
+        <activity android:name=".ContactActivity"></activity>
     </application>
 
 </manifest>

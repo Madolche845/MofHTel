@@ -73,8 +73,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             Toast.makeText(this,"This is Booking page",Toast.LENGTH_LONG).show();
         }
         if(id == R.id.contact){
-            Intent map = new Intent(HomeActivity.this, MapsActivity.class);
-            startActivity(map);
+            Intent contact = new Intent(HomeActivity.this, ContactActivity.class);
+            startActivity(contact);
             finish();
         }
         return false;
