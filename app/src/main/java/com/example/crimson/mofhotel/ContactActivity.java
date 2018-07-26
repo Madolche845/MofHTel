@@ -97,6 +97,10 @@ public class ContactActivity extends AppCompatActivity  implements NavigationVie
         if(id == R.id.contact){
             Toast.makeText(this,"You on screen already!",Toast.LENGTH_LONG).show();
         }
+        if(id == R.id.key){
+            Intent myintent = new Intent(ContactActivity.this,KeyActivity.class);
+            startActivity(myintent);
+        }
         return false;
     }
 

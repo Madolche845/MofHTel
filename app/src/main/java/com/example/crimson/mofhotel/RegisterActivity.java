@@ -118,6 +118,10 @@ public class RegisterActivity extends AppCompatActivity implements NavigationVie
             Intent myintent = new Intent(RegisterActivity.this,ContactActivity.class);
             startActivity(myintent);
         }
+        if(id == R.id.key){
+            Intent myintent = new Intent(RegisterActivity.this,BookingActivity.class);
+            startActivity(myintent);
+        }
         return false;
     }
 }

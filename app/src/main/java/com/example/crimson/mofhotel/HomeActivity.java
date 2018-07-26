@@ -91,6 +91,10 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             startActivity(contact);
             finish();
         }
+        if(id == R.id.key){
+            Intent myintent = new Intent(HomeActivity.this,KeyActivity.class);
+            startActivity(myintent);
+        }
         return false;
     }
     //Button Exit app.

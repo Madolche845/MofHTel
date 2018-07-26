@@ -30,7 +30,7 @@ public class BillActivity extends AppCompatActivity {
         A2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent myintent = new Intent(BillActivity.this,stockActivity.class);
+                Intent myintent = new Intent(BillActivity.this,KeyActivity.class);
                 startActivity(myintent);
             }
         });

@@ -48,8 +48,11 @@
         <!-- <activity android:name=".HomeActivity"></activity> -->
         <activity android:name=".BookingActivity" />
         <activity android:name=".ContactActivity" />
+
         <activity android:name=".stockActivity"></activity>
         <activity android:name=".BillActivity"></activity>
+        <activity android:name=".KeyActivity" />
+
     </application>
 
 </manifest>
