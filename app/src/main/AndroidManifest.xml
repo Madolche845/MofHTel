@@ -39,18 +39,17 @@
         <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps"
-            android:parentActivityName=".ContactActivity"
-            />
-
+            android:parentActivityName=".ContactActivity" />
         <activity android:name=".login_activity" />
 
         <!-- <activity android:name=".login_activity"> -->
         <!-- </activity> -->
-        <activity android:name=".RegisterActivity"></activity>
+        <activity android:name=".RegisterActivity" />
         <!-- <activity android:name=".HomeActivity"></activity> -->
-        <activity android:name=".BookingActivity"></activity>
-        <activity android:name=".ContactActivity"></activity>
-
+        <activity android:name=".BookingActivity" />
+        <activity android:name=".ContactActivity" />
+        <activity android:name=".KeyActivity" />
+        <activity android:name=".Main2Activity"></activity>
     </application>
 
 </manifest>

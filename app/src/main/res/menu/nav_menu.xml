@@ -15,6 +15,10 @@
     <item android:id="@+id/booking"
         android:title="Book now">
     </item>
+    <item android:id="@+id/key"
+        android:title="Key"
+        android:icon="@mipmap/baseline_vpn_key_black_18dp">
+    </item>
     <item android:id="@+id/contact"
         android:title="Contact"
         android:icon="@mipmap/baseline_contact_phone_black_18dp">

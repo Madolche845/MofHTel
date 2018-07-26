@@ -131,6 +131,10 @@ public class login_activity extends AppCompatActivity implements NavigationView.
 //            startActivity(map);
 //            finish();
         }
+        if(id == R.id.key){
+            Intent myintent = new Intent(login_activity.this,KeyActivity.class);
+            startActivity(myintent);
+        }
         return false;
     }
 }

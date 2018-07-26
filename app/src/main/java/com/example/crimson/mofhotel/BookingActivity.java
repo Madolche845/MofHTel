@@ -142,6 +142,10 @@ public class BookingActivity extends AppCompatActivity implements NavigationView
 //            finish();
 
         }
+        if(id == R.id.key){
+            Intent myintent = new Intent(BookingActivity.this,KeyActivity.class);
+            startActivity(myintent);
+        }
         return false;
     }
 }
